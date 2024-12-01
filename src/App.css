@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: #ffdf8c;
+    padding: 50px;
+}
+.ant-segmented-group, .ant-segmented{
+    width: 100% !important;
+}
+.ant-segmented-item{
+    width: 50% !important;
+}
