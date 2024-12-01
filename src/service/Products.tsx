@@ -3,7 +3,7 @@ import { Context } from '../context/Context';
 import { useQuery } from '@tanstack/react-query';
 import { useAxios } from '../hook/useAxios';
 import ProductCard from '../components/ProductCard';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 export interface ProductType{
   id:string;
