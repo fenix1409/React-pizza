@@ -18,7 +18,7 @@ export interface ProductType{
 
 const Products = () => {
   const {categoryId} = useContext(Context)
-  const orderList = useSelector((state:{orderList:ProductType[]}) => state.orderList)
+  // const orderList = useSelector((state:{orderList:ProductType[]}) => state.orderList)
   
   const {data: products = [] }= useQuery({
     queryKey: ["products", categoryId],
