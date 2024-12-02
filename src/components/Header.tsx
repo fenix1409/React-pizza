@@ -27,7 +27,7 @@ const Header = () => {
         </div>
       </Link>
       <button onClick={() => navigate("/basket")} className="w-[150px] flex items-center justify-center gap-[13px] py-[16px] rounded-[30px] cursor-pointer bg-[#FE5F1E]">
-        <span className="text-[16px] font-bold text-white"> {totalPrice}₽</span>
+        <span className="text-[16px] font-bold text-white"> {totalPrice} ₽</span>
         <div className="inline-block border-l-[2px] h-[27px] border-[#ffffff40]"></div>
         <BasketIcon />
         <span className="text-[16px] text-white">{orderedProducts.length}</span>
