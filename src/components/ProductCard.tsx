@@ -16,7 +16,7 @@ interface ProductCardType {
 
 const ProductCard: React.FC<ProductCardType> = ({ item, getAllProducts, setGetAllProducts }) => {
     const dispatch = useDispatch()
-    const [type, setType] = useState<string>("tonkoe")
+    const [type, setType] = useState<string>("тонкое")
     const [size, setSize] = useState<string>(item.size[0])
 
     function SegmentedOption(arr: string[]): any {

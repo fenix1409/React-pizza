@@ -3,7 +3,7 @@ import { Context } from '../context/Context';
 import { useQuery } from '@tanstack/react-query';
 import { useAxios } from '../hook/useAxios';
 
-interface CategoryType {
+export interface CategoryType {
     id: string;
     title:string;
 }

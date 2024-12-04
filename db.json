@@ -1,60 +1,77 @@
 {
-    "categories":[
-        {
-            "id":null,
-            "title":"Все"
-        },
-        {
-            "id":2,
-            "title":"Мясные"
-        },
-        {
-            "id":3,
-            "title":"Вегетарианская"
-        },
-        {
-            "id":4,
-            "title":"Гриль"
-        },
-        {
-            "id":5,
-            "title":"Острые"
-        },
-        {
-            "id":6,
-            "title":"Закрытые"
-        }
-    ],
-    "products":[
-        {
-            "id":"1",
-            "categoryId":"2",
-            "imgURL":"https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
-            "name":"Чизбургер-пицца",
-            "type":["тонкое", "традиционное"],
-            "size":["26 cm", "30 cm", "40 cm"],
-            "price":395,
-            "orderCount":0
-        },
-        {
-            "id":"2",
-            "categoryId":"3",
-            "imgURL":"https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
-            "name":"Сырная",
-            "type":["тонкое", "традиционное"],
-            "size":["26 cm"],
-            "price":450,
-            "orderCount":0
-        },
-        {
-            "id":"3",
-            "categoryId":"4",
-            "imgURL":"https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
-            "name":"Креветки по-азиатски",
-            "type":["тонкое", "традиционное"],
-            "size":["30 cm"],
-            "price":290,
-            "orderCount":0
-        }
-    ]
+  "categories": [
+    {
+      "id": 1,
+      "title": "Все"
+    },
+    {
+      "id": 2,
+      "title": "Мясные"
+    },
+    {
+      "id": 3,
+      "title": "Вегетарианская"
+    },
+    {
+      "id": 4,
+      "title": "Гриль"
+    },
+    {
+      "id": 5,
+      "title": "Острые"
+    },
+    {
+      "id": 6,
+      "title": "Закрытые"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "categoryId": "2",
+      "imgURL": "https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
+      "name": "Чизбургер-пицца",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        "26 cm",
+        "30 cm",
+        "40 cm"
+      ],
+      "price": 395,
+      "orderCount": 0
+    },
+    {
+      "id": "2",
+      "categoryId": "3",
+      "imgURL": "https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
+      "name": "Сырная",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        "26 cm"
+      ],
+      "price": 450,
+      "orderCount": 0
+    },
+    {
+      "id": "3",
+      "categoryId": "4",
+      "imgURL": "https://thumbs.dreamstime.com/b/pizza-delicious-isolated-white-transparent-background-png-file-ready-to-use-pizza-delicious-isolated-white-transparent-293224138.jpg",
+      "name": "Креветки по-азиатски",
+      "type": [
+        "тонкое",
+        "традиционное"
+      ],
+      "size": [
+        "30 cm"
+      ],
+      "price": 290,
+      "orderCount": 0
+    }
+  ]
 }

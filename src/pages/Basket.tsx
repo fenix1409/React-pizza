@@ -1,12 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { deleteOrderProduct } from "../store/orderSlice";
+import { clearOrders, decrement, deleteOrderProduct, increment } from "../store/orderSlice";
 import { ProductType } from "../service/Products";
 import { ClearIcon, DeleteIcon, Korzina } from "../assets/images/Icons";
 import Logo from "../assets/images/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Basket = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate()
   const orderedProducts = useSelector(
     (state: { orderList: ProductType[] }) => state.orderList
   );
@@ -16,6 +17,11 @@ const Basket = () => {
       val += item.price * item.orderCount;
       return val;
     }, 0);
+
+    function handleClear(){
+      dispatch(clearOrders())
+      setTimeout(() => navigate(-1), 700);
+    }
 
   return (
     <div className="bg-white p-5 rounded-md">
@@ -31,7 +37,7 @@ const Basket = () => {
       <div className="w-[821px] mx-auto mt-[135px]">
         <div className="flex justify-between">
           <Korzina />
-          <button className="flex items-center space-x-2 text-[#868686]"><ClearIcon /></button>
+          <button onClick={handleClear} className="flex items-center space-x-2 text-[#868686]"><ClearIcon /></button>
         </div>
         <ul className="w-[900px] mx-auto mt-[50px] space-y-[30px]">
           {orderedProducts.map((item: ProductType) => (
@@ -44,9 +50,9 @@ const Basket = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <button className="w-[22px] flex items-center justify-center rounded-full border-[2px] border-[#FF5F1E] text-[#FF5F1E] text-[16px]">-</button>
+                <button onClick={() => dispatch(decrement(item))} className="w-[22px] flex items-center justify-center rounded-full border-[2px] border-[#FF5F1E] text-[#FF5F1E] text-[16px]">-</button>
                 <strong>{item.orderCount}</strong>
-                <button className="w-[22px] flex items-center justify-center rounded-full border-[2px] border-[#FF5F1E] text-[#FF5F1E] text-[16px]">+</button>
+                <button onClick={() => dispatch(increment(item))} className="w-[22px] flex items-center justify-center rounded-full border-[2px] border-[#FF5F1E] text-[#FF5F1E] text-[16px]">+</button>
               </div>
               <strong>{item.price * item.orderCount} P</strong>
               <button onClick={() => dispatch(deleteOrderProduct(item.id))} className="text-[#D7D7D7] border-[#D7D7D7]">
